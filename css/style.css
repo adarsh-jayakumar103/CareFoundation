@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+}
+
+.services{
+    background: #ffffff;
+    text-align: center;
+}
+
+.cen{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.service{
+    display: inline-block;
+    width: calc(100% / 3);
+    margin: 0 -2px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.service:hover{
+    background: #ddd;
+}
+
+.service i{
+    color: cornflowerblue;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.service h2{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+}
+
+.service p{
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.causes{
+    background:rgba(78, 168, 241, 0.308);
+    text-align: center;
+}
+
+@media screen and (max-width:900px) {
+    .service{
+        width: 50%;
+    }
+    .cause{
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    .service{
+        width: 100%;
+    }
+    .cause{
+        width: 100%;
+    }
+    
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+
+
+.model{
+    height: 350px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.cause{
+    display: inline-block;
+    width: calc(100% / 4);
+    margin: 0 -2px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+}
