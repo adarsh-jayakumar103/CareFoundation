@@ -30,7 +30,7 @@ body{
 }
 
 .service i{
-    color: cornflowerblue;
+    color: #6495ed;
     font-size: 34px;
     margin-bottom: 20px;
 }
@@ -94,6 +94,13 @@ a{
     max-width: 100%;
 }
 
+.cen1{
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    align-items: center;
+}
 
 .cause{
     display: inline-block;
