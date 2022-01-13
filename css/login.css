@@ -4,6 +4,7 @@ body
     padding: 0;  
     background-color:#6495ed;  
     font-family: 'Arial';  
+    border-radius: 10px;
 }  
 .login{  
         width: 382px;  
@@ -22,7 +23,12 @@ h2{
 }  
 label{  
     color: #ff0808;  
-    font-size: 17px;  
+    font-size: 17px;
+    
+}
+button{
+
+    border-radius: 10px;
 }  
 #Uname{  
     width: 300px;  
