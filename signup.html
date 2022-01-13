@@ -1,0 +1,157 @@
+<html>
+<head>
+    <title>SIGNUPPAGE</title>
+   
+   <link rel="stylesheet" href="signupstyle.css">
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        
+        <img class="logo" src="images/logo.png" alt="logo">
+        <nav>
+            
+            <ul class="nav__links">
+                
+               <li >
+                <a href="index.html"> Home </a>
+                
+                </li>
+                <li >
+                
+                <a href="about.html" > About</a>
+                </li>
+                <li >
+                
+                <a href="Causes.html" > Causes</a>
+                </li>
+                <li >
+                
+                <a href="donate.html" > Donate</a>
+                </li>
+                
+                
+                </ul>
+        </nav>
+            
+        </header> 
+    <div class="sign-up-form">
+        <h1>Sign Up Now</h1>
+        <form name="f1" onsubmit="return myfunction()">
+            <input type="text" name="fname" id="fullname" class="input-box"  placeholder="Full Name">
+            <span id="Message"></span>
+            <br>
+            <input type="email" id="email" class="input-box" placeholder="Your Email">
+            <span id="Msgem"></span>
+            <br>
+            <input type="password" id="password" class="input-box" placeholder="Password">
+            <span id="Msgpw"></span>
+            <br>
+            <input type="password" id="cpp" class="input-box" placeholder="Confirm Password">
+            <span id="Msgcpp"></span>
+            <br>
+            <input type="text" id="aadhar" class="input-box" placeholder="Aadhaar Number" >
+            <span id="Msgaad"></span>
+            <br>
+            <input type="text" id="phnum" class="input-box" placeholder="Phone Number">
+            <span id="Msgphnum"></span>
+            <br>
+            <br>
+            Date of Birth: <input type="date" name="dob">
+            <span id="Msgdob"></span>
+            <br>
+            <br>
+            Gender :
+            <input type="radio" id="gender" name="gender" class="input-radio" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="gender" class="input-radio" value="Female">
+            <label for="Female">Female</label>
+            <input type="radio" id="gender"class="input-radio" value="Other">
+            <label for="Other">Other</label>
+            <span id="Msggen"></span>
+            <br>
+            <p><span><input type="checkbox"></span>I agree to all terms and conditions</p>
+            
+            <input type="submit"  class="sign-btn" value="Submit" >
+            <br>
+            <hr>
+            <p>Do you have an account ? <a href="#">Sign In</a></p>
+            
+           
+        </form>
+    </div>
+<script type="text/javascript">
+    function myfunction()
+    {
+       
+   
+    var fn=document.getElementById("fullname").value;
+        
+    var em=document.getElementById("email").value;
+        
+    var pw=document.getElementById("password").value;
+      
+    var cpw=document.getElementById("cpp").value;
+          
+    var aad=document.getElementById("aadhar").value;
+          
+    var ph=document.getElementById("phnum").value;
+        
+    var gn=document.getElementById("gender").value;
+        
+  
+    if(fn==null || fn=="")
+    {
+    
+    alert("Name not found");
+    document.getElementById("Message").innerHTML="Name cannot be blank";
+    return false;
+    }
+    else if(em==null || em=="")
+    {
+    document.getElementById("Msgem").innerHTML="Email cannot be blank";
+    return false;
+    }
+    else if(pw==null || pw=="")
+    {
+    document.getElementById("Msgpw").innerHTML="Password cannot be blank"; 
+    return false;
+    }
+    else if(cpw==null || cpw=="")
+    {
+    document.getElementById("Msgcpp").innerHTML="Confirm Password cannot be blank";
+    return false;
+    }
+    else if(pw==cpw)
+    {
+    document.getElementById("Msgpww").innerHTML="Not Matching";
+    return false;
+    }
+    else if(aad==null || aad=="")
+    {
+    document.getElementById("Msgaad").innerHTML="Aadhaar number cannot be blank";
+    return false;
+    }
+    else if(aad.length>0 && aad.length<13)
+        {
+            document.getElementById("Msgaad").innerHTML="Length is not matching";
+            return false;
+        }
+    else if(ph==null || ph=="")
+    {
+    document.getElementById("Msgphnum").innerHTML="Phonenumber cannot be blank";
+    return false;
+    }
+    else if((gn[0].checked==false)&&(gn[1].checked==false))
+    {
+    document.getElementById("Msggen").innerHTML="Gender  cannot be blank";
+    return false;
+    }
+    else
+    {
+    alert("Submitted");
+    }
+    }
+    </script>
+    </body>
+</html>
