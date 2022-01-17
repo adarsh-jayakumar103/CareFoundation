@@ -53,7 +53,7 @@
             <input type="text" id="aadhar" class="input-box" placeholder="Aadhaar Number" >
             <span id="Msgaad"></span>
             <br>
-            <input type="text" id="phnum" class="input-box" placeholder="Phone Number">
+            <input type="number" id="phnum" class="input-box" placeholder="Phone Number">
             <span id="Msgphnum"></span>
             <br>
             <br>
@@ -83,6 +83,9 @@
 <script type="text/javascript">
     function myfunction()
     {
+        
+    var correct_name = /^[A-Za-z]+$/;
+    var correct_aad = /^[0-9]+$/;
        
    
     var fn=document.getElementById("fullname").value;
@@ -102,50 +105,66 @@
   
     if(fn==null || fn=="")
     {
-    
     alert("Name not found");
     document.getElementById("Message").innerHTML="Name cannot be blank";
     return false;
     }
-    else if(em==null || em=="")
+    if(fn.match(correct_name))
+        {
+            true;
+            
+        }
+        else{
+            document.getElementById("Message").innerHTML="Only Alphabets Allowed";
+            return false;
+         }
+    if(em==null || em=="")
     {
     document.getElementById("Msgem").innerHTML="Email cannot be blank";
     return false;
     }
-    else if(pw==null || pw=="")
+    if(pw==null || pw=="")
     {
-    document.getElementById("Msgpw").innerHTML="Password cannot be blank"; 
-    return false;
+        document.getElementById("Msgpw").innerHTML="Password cannot be blank"; 
+        return false;
     }
-    else if(cpw==null || cpw=="")
+    else if(cpw==null || cpw=="" )
     {
-    document.getElementById("Msgcpp").innerHTML="Confirm Password cannot be blank";
-    return false;
+        document.getElementById("Msgcpp").innerHTML="Confirm Password cannot be blank";
+        return false;
     }
-    else if(pw==cpw)
+    else if(pw!=cpw)
     {
-    document.getElementById("Msgpww").innerHTML="Not Matching";
-    return false;
+        alert("Not Matching");
+        document.getElementById("Msgpww").innerHTML="Not Matching";
+        return false;
     }
-    else if(aad==null || aad=="")
+        
+    if(aad==null || aad=="")
     {
     document.getElementById("Msgaad").innerHTML="Aadhaar number cannot be blank";
     return false;
     }
-    else if(aad.length>0 && aad.length<13)
+    else if(aad.length>0 && aad.length<12)
         {
             document.getElementById("Msgaad").innerHTML="Length is not matching";
             return false;
         }
-    else if(ph==null || ph=="")
+    if(ph==null || ph=="")
     {
     document.getElementById("Msgphnum").innerHTML="Phonenumber cannot be blank";
     return false;
     }
-    else if((gn[0].checked==false)&&(gn[1].checked==false))
+        else if(ph.length>0 && ph.length<10)
+            {
+                alert("length is not matching");
+                return false;
+            }
+        
+    if((gn[0].checked==false)&&(gn[1].checked==false))
     {
     document.getElementById("Msggen").innerHTML="Gender  cannot be blank";
-    return false;
+    return false; 
     }
     else
     {
