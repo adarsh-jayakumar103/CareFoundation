@@ -3,7 +3,7 @@ body
     margin: 0;
     padding: 10px;
     font-family: sans-serif;
-    background: lightblue;
+    background-image: url("bg_3.jpg");
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
@@ -75,7 +75,7 @@ a{
 .sign-up-form
 {
     width: 500px;
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    box-shadow: 7 0 3px 0 rgba(0,0,0,0.3);
     background: #fff;
     padding: 20px;
     margin: 10% auto 0;
