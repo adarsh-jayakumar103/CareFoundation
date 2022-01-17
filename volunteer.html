@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>Volunteer Form</title>
+   
+   <link rel="stylesheet" href="counsel.css">
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet">
+    <script language="javascript" type="text/javascript" src="hert.js"></script>
+</head>
+<body>
+    <header> 
+        
+     
+        <nav>
+            
+            <ul class="nav__links">
+                
+               <li >
+                <a href="index.html"> Home </a>
+                
+                </li>
+                <li >
+                
+                <a href="about.html" > About</a>
+                </li>
+                <li >
+                
+                <a href="Causes.html" > Causes</a>
+                </li>
+                <li >
+                
+                <a href="donate.html" > Donate</a>
+                </li>
+                
+                
+                </ul>
+        </nav>
+            
+        </header> 
+    <div class="sign-up-form">
+        <h1>Volunteer with us Now!!</h1>
+        <form name="f1" id="f1">
+            <input type="text" name="fname" id="fname" class="input-box"  placeholder="Full Name">
+            <span id="Message"></span>
+            <br>
+            <input type="email" id="email" class="input-box" placeholder="Your Email">
+            <span id="Msgem"></span>
+            <br>
+            <input type="text" id="phnum" class="input-box" placeholder="Phone Number">
+            <span id="Msgphnum"></span>
+            <br>
+            Date of Birth:<br> <input type="date" name="doa" id="doa" class="input-box">
+            <span id="Msgdob"></span>
+            <br>
+            <input type="textfield" id="msg" class="input-box" placeholder="Why join us?">
+            <span id="Msgtext"></span>
+            <br>
+            Choose a preferred time:<br>
+            <select name="time" id="time" class="input-box">
+              <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+              <option value="11:00 AM - 12:00 Noon">11:00 AM - 12:00 Noon</option>
+              <option value="12:00 Noon - 01:00 PM">12:00 Noon - 01:00 PM </option>
+              <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+              <option value="05:00 PM - 06:00 PM">05:00 PM - 06:00 PM</option>
+              <option value="06:00 PM - 07:00 PM">06:00 PM - 07:00 PM</option>
+            </select>
+            <br>
+            Choose a volunteer category:<br>
+            <select name="cat" id="cat" class="input-box">
+              <option value="Part Time">Part Time</option>
+              <option value="Full Time">Full Time</option>
+            </select>
+            <br>
+            Gender :
+            <input type="radio" id="gender" name="gender" class="input-radio" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="gender" class="input-radio" value="Female">
+            <label for="Female">Female</label>
+            <input type="radio" id="gender"class="input-radio" value="Other">
+            <label for="Other">Other</label>
+            <span id="Msggen"></span>
+            <br>
+            <p><span><input type="checkbox"></span>I agree to all terms and conditions</p>
+            
+            <input type="submit" class="sign-btn" value="Book Now" >
+            <br>
+        </form>
+    </div>
+    <script type="text/javascript">
+        var form = document.getElementById('f1')
+
+form.addEventListener('submit',function(event){
+    event.preventDefault()
+
+    var fname = document.getElementById('fname').value
+   // console.log(fname)
+    var email = document.getElementById('email').value
+    //console.log(email)
+    var phnum = document.getElementById('phnum').value
+    //console.log(phnum)
+    var date = document.getElementById('doa').value
+    //console.log(date)
+    var time = document.getElementById('time').value
+    //console.log(time)
+    var cat = document.getElementById('cat').value
+    //console.log(cat)
+    var gender = document.getElementById('gender').value
+    //console.log(gender)
+    
+    alert("Thankyou your form has been submitted!!")
+    document.write("<h2>"+ "Application Form"+ "</h2>")
+    document.write("Name = " + fname + "<br>");
+    document.write("Email = " + email + "<br>");
+    document.write("Mobile No. = " + phnum + "<br>");
+    document.write("Date of Birth = " + date + "<br>");
+    document.write("Prefered Time = " + time + "<br>");
+    document.write("Part Time/Full Time = " + cat + "<br>");
+    document.write("<br>"+"<br>"+"*Our team will go through your form and will get back to you.")
+    document.write(" Keep this form handy for hasle free interviews."+"<br>"+ "Thankyou")
+    window.print();
+})
+    </script>
+    </body>
+</html>
